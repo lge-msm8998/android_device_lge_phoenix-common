@@ -8,9 +8,8 @@
 
 set -e
 
-export DEVICE=phoenix_sprout
 export DEVICE_COMMON=msm8998-common
+export DEVICE_SPECIFIED_COMMON_DEVICE="phoenix_sprout q910"
 export VENDOR=lge
-export VENDOR_COMMON=${VENDOR}
 
 "./../../${VENDOR_COMMON}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"

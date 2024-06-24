@@ -10,7 +10,7 @@ import os
 import sys
 from hashlib import sha1
 
-device='phoenix_sprout'
+device='phoenix-common'
 vendor='lge'
 
 files = [
@@ -36,7 +36,7 @@ def update(lines):
 
         # Check if we need to set SHA1 hash for the next files
         if line[0] == '#':
-            needSHA1 = (' - from' in line or '# phoenix_sprout - ' in line)
+            needSHA1 = (' - from' in line)
             continue
 
         if needSHA1:
