@@ -28,6 +28,10 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_COMMON_PATH)/manifest.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_lge_phoenix
+TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_phoenix
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 $(call soong_config_set,LGE_LIGHTS_HAL,INCLUDE_DIR,$(DEVICE_COMMON_PATH)/include)
